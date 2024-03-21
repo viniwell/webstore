@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "shop",
+    "cart",
 ]
 
 MIDDLEWARE = [
@@ -127,3 +128,4 @@ MEDIA_ROOT = BASE_DIR
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+CART_SESSION_ID = "cart"
