@@ -10,6 +10,11 @@
         <h2>{{ product.name }}</h2>
         <p><a href={{product.category.get_absolute_url}}>{{product.category }}</a> - Category</p>
         <p><i>{{product.price }} $</i></p>
+        <form action="{% url "cart:cart_add" product.id %}" method = "post">
+            {% csrf_token %}
+            {{ cart_product_form }}
+            <input type="submit" value="Add to Cart" class="ms-2 btn btn-warning">
+        </form>
     </div>
     <div class="col-6">
         {{product.description | linebreaks}}
